@@ -1,0 +1,25 @@
+nano .gitignore
+
+# Data (never commit raw genomic data)
+data/raw/*
+data/processed/*
+*.vcf
+*.vcf.gz
+*.bam
+*.bed
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.env
+
+# Models (often large)
+models/*.pkl
+models/*.joblib
+
+# Keep folder structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
